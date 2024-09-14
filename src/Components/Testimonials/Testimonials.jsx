@@ -12,20 +12,21 @@ const Testimonials = () => {
   const slideForward=()=>{
     console.log("Im getting hitted")
     if(tx>-40){
-      tx-=10;
+      tx-=20;
     }
   slider.current.style.transform=`translateX(${tx}%)`;
   }
   const slideBackward=()=>{
-    if(tx< 0){
+    console.log("hey")
+    if(tx<0){
       tx+=20;
     }
   slider.current.style.transform=`translateX(${tx}%)`;
   }
   return (
     <div className="testimonials">
-      <img src={backIcon} alt="hello" className="back-btn" onClick={slideForward}/>
-     <img src={nextIcon} alt="hey" className="next-btn" onClick={slideBackward}/>
+    <img src={backIcon} alt="hello" className="back-btn" onClick={slideBackward}/>
+    <img src={nextIcon} alt="hey" className="next-btn" onClick={slideForward}/>
      <div className="slider">
       <ul ref={slider}>
         <li>
@@ -33,7 +34,7 @@ const Testimonials = () => {
             <div className="user-info">
               <img src={user1} alt=""></img>
               <div>
-                <h3>William Jackson</h3>
+                <h3>William Jackson1</h3>
                 <span>Educity, USA</span>
               </div>
             </div>
@@ -45,7 +46,7 @@ const Testimonials = () => {
             <div className="user-info">
               <img src={user2} alt=""></img>
               <div>
-                <h3>William Jackson</h3>
+                <h3>William Jackson2</h3>
                 <span>Educity, USA</span>
               </div>
             </div>
@@ -69,7 +70,7 @@ const Testimonials = () => {
             <div className="user-info">
               <img src={user4} alt=""></img>
               <div>
-                <h3>William Jackson</h3>
+                <h3>William Jackson4</h3>
                 <span>Educity, USA</span>
               </div>
             </div>
